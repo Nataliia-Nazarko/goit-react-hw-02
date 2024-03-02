@@ -1,4 +1,5 @@
 import css from "./Options.module.css";
+import PropTypes from "prop-types";
 
 const Options = ({ options, updateFeedback, totalFeedback, reset }) => {
   return (
@@ -30,6 +31,10 @@ const Options = ({ options, updateFeedback, totalFeedback, reset }) => {
       ) : null}
     </div>
   );
+};
+
+Options.propTypes = {
+  name: PropTypes.string,
 };
 
 export default Options;

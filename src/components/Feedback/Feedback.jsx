@@ -1,4 +1,5 @@
 import css from "./Feedback.module.css";
+import PropTypes from "prop-types";
 
 const Feedback = ({ stats, totalFeedback, percentage }) => {
   return (
@@ -14,6 +15,12 @@ const Feedback = ({ stats, totalFeedback, percentage }) => {
       <p className={css.feedback}>positive: {percentage}%</p>
     </div>
   );
+};
+
+Feedback.propTypes = {
+  state: PropTypes.number,
+  totalFeedback: PropTypes.number,
+  percentage: PropTypes.number,
 };
 
 export default Feedback;
